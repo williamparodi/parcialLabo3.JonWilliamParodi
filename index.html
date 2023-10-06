@@ -3,9 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <script src="./js/scripts.js" type="module"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Vehiculos</h1>
+    </header>
+    <form>
+        <div id="formDatos">
+            <fieldset id="recuadro">       
+                <p>Form Datos:</p>
+                <label>Filtar por:</label>
+                <select id="drop">
+                    <optgroup label="Listados"></optgroup>
+                        <option value="1" selected>Todos</option>
+                        <option value="2"> Por Terrestre </option>
+                        <option value="3"> Por Aereo</option>
+                    </optgroup>
+                </select>
+                <div>
+                    <label>Calcular promedio de velocidad max:</label>
+                    <input id="promedioVelocidad" type="text">
+                    <input id="promedio" type="button" value="Calcular">
+                </div>
+                <div class="columnas">
+                    <label>Mostrar columnas</label>
+                    <label>id</label>
+                    <input type="checkbox" name="checkid" value="Id">
+                    <label>modelo</label>
+                    <input type="checkbox" name="checkmodelo" value="Modelo">
+                    <label>ano Fab</label>
+                    <input type="checkbox" name="checkanoFab" value="Año Fab">
+                    <label>vel Max</label>
+                    <input type="checkbox" name="checkvelMax" value="Vel max">
+                    <label>alt Max</label>
+                    <input type="checkbox" name="checkaltMax" value="Alt max">
+                    <label>autonomia</label>
+                    <input type="checkbox" name="checkautonomia" value="Autonomia">
+                    <label>cant Pue</label>
+                    <input type="checkbox" name="checkcantPue" value="Cant pue">
+                    <label>cant Rue</label>
+                    <input type="checkbox" name="checkcantRue" value="Cant Rue">
+                </div>
+                <section class="seccion-tabla">
+                    <div id="tabla"></div>
+                    <div id="botonesDatos">
+                        <input id="agregar" type="submit" value="Agregar">
+                        <input id="cancelar" type="submit" value="Cancelar">
+                    </div>
+                </section>
+            </fieldset>
+        </div>
+    </form>
+<form>
+    <div id="formAbm">
+        <fieldset id="recuadroABM">
+            <p>Formulario ABM</p>
+            <label>Id:</label>
+            <input id="textId" type="text" name="txtId">
+            <label>modelo:</label>
+            <input id="txtModelo" type="text" name="txtModelo">
+            <label>ano fab:</label>
+            <input id="txtAnoFab" type="text" name="txtAnoFab">
+            <label>vel max</label>
+            <input id="txtVelMax" type="text" name="txtVelMax">
+            <select id="dropAbm">
+                <optgroup label="Tipo"></optgroup>
+                    <option value="terrestre">Terrestre </option>
+                    <option value="aereo">Aereo</option>
+                </optgroup>
+            </select>
+            <label>alt Max:</label>
+            <input id="txtAltMax" type="text" name="txtAltMax">
+            <label>autonomia:</label>
+            <input id="txtAutonomia" type="text" name="txtAutonomia">
+            <label>cant Pue:</label>
+            <input id="txtCantPue" type="text" name="txtCantPue">
+            <label>cant Rue:</label>
+            <input id="txtCantRue" type="text" name="txtCantRue">
+            <div id="tablaAbm">
+                <input id="aceptarAbm" type="submit" value="Aceptar">
+                <input id="cancelarAbm" type="submit" value="Cancelar">
+                <input id="eliminarAbm" type="submit" value="Eliminar">
+            </div>
+        </fieldset>
+    </div>
+</form>   
 </body>
 </html>
