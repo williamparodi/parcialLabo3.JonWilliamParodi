@@ -40,7 +40,7 @@ window.addEventListener("load", (e) =>
       checkbox.checked = true;
     });
     actualizarTabla(seccionTabla, lista);
-    //ordenar(lista);
+    ordenar(lista);
     mostrarColumnas();
 });
 
@@ -425,7 +425,6 @@ function cargarFormAereo(listaAereo)
 //evento aceptar y eliminar
 aceptarAbmButton.addEventListener('click',handlerAceptar);
 eliminarButton.addEventListener('click',handlerBorrar);
-
 
 
 function activaBotones() {
