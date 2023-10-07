@@ -17,8 +17,8 @@ export class Terrestre extends Vehiculo
 
     static generaNuevoId()
     {
-        const nuevoId = ++Empleado.idAutoIncrementalEmpleado;
-        localStorage.setItem("idAutoIncrementalEmpleado",nuevoId.toString());
+        const nuevoId = ++Terrestre.idAutoIncremental;
+        localStorage.setItem("idAutoIncremental",nuevoId.toString());
         return nuevoId;    
     }
 }

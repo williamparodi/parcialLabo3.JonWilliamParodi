@@ -4,8 +4,8 @@ export class Aereo extends Vehiculo
     static idAutoIncremental = parseInt(localStorage.getItem("idAutoIncremental"))||5000;
     constructor(id,modelo,anoFab,velMax,altMax,autonomia)
     {
-        super(id,modelo,apellido,edad)
-        this.id = Vehiculo.generarNuevoId();
+        super(id,modelo,anoFab,velMax)
+        this.id = Aereo.generaNuevoId();
         this.altMax = altMax;
         this.autonomia = autonomia;
     }

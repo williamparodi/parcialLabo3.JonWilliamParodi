@@ -1,6 +1,6 @@
 function validaVehiculo(vehiculo)
 {
-    retorno = false;
+    let retorno = false;
     if(validarLetras(vehiculo.modelo) && validarNumeros(vehiculo.anoFab) && vehiculo.anoFab > 1885
         && validarNumeros(vehiculo.velMax))
     {
@@ -11,11 +11,10 @@ function validaVehiculo(vehiculo)
 
 export function validaTerrestre(terrestre)
 {
-    retorno = false;
-    if(validaVehiculo(terrestre)
-        && validarNumeros(terrestre.canRue))
+    let retorno = false;
+    if(validaVehiculo(terrestre)&& validarNumeros(terrestre.cantPue) && validarNumeros(terrestre.cantRue))
     {
-        if(terrestre.canPue > 0)
+        if(terrestre.cantPue > -1)
         {
             retorno = true;
         }
@@ -30,7 +29,7 @@ export function validaTerrestre(terrestre)
 
 export function validaAereo(aereo)
 {
-    retorno = false;
+    let retorno = false;
     if(validaVehiculo(aereo) && validarNumeros(aereo.altMax) && validarNumeros(aereo.autonomia))
     {
         retorno = true;

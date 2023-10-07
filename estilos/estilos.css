@@ -4,3 +4,119 @@
     padding: 5px;
     box-sizing: border-box;
 }
+#formDatos
+{
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*background: url(../imagenes/fondoDato.jpg);*/
+    
+}
+
+form
+{
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-tabla
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(252, 180, 195);
+    font-size : 25;
+    font-family:"cursive";
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th,td
+{
+    border: 1px solid black;
+    padding: 5px 10px;
+    text-align: center; 
+}
+
+/* Mostrar la celda */
+.table-cell 
+{
+    display: table-cell;  
+}
+  
+  /* Ocultar la celda */
+.none 
+{
+    display: none;
+}
+
+#formAbm
+{
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: chocolate;
+}
+
+#agregar
+{
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+#cancelar
+{
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+h1
+{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+    color: rgb(233, 235, 237);
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+td
+{
+    background-color: rgb(24, 215, 253);
+    
+}
+
+td:hover
+{
+    transition: background-color .5s;   
+    background-color: rgb(193, 98, 151);
+}
+
+th:hover
+{
+    transition: background-color .5s;   
+    background-color: rgb(101, 100, 124);
+}
+
+body
+{
+   /* background: url(../imagenes/fondo.jpg);*/
+}
+
+#botonesDatos
+{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+} 

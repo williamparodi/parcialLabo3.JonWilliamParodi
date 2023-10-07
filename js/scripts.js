@@ -145,7 +145,7 @@ function calcularPromedioVel(lista)
 dropdownAbm.addEventListener("change", (event) => 
 {
     const selectedValue = event.target.value;
-    const txtAltMax = document.getElementById("txtVelMax");
+    const txtAltMax = document.getElementById("txtAltMax");
     const txtAutonomia = document.getElementById("txtAutonomia");
     const txtCantPue = document.getElementById("txtCantPue");
     const txtCantRue = document.getElementById("txtCantRue");
@@ -153,7 +153,7 @@ dropdownAbm.addEventListener("change", (event) =>
     txtId.readOnly = true;
 
     txtAltMax.removeAttribute("disabled");
-    txtAltMax .value = "";
+    txtAltMax.value = "";
 
     txtAutonomia.removeAttribute("disabled");
     txtAutonomia.value = "";
@@ -162,17 +162,17 @@ dropdownAbm.addEventListener("change", (event) =>
     txtCantPue.value = "";
 
     txtCantRue.removeAttribute("disabled");
-    txtCantRue = "";
+    txtCantRue.value = "";
 
     txtId.removeAttribute("disabled");
     txtId.value = "";
 
-    if (selectedValue === "aereo")
+    if (selectedValue === "terrestre")
     {
       txtAltMax.setAttribute("disabled", "disabled");
       txtAutonomia.setAttribute("disabled", "disabled");
     } 
-    else if (selectedValue === "terrestre") 
+    else if (selectedValue === "aereo") 
     {
       txtCantPue.setAttribute("disabled", "disabled");
       txtCantRue.setAttribute("disabled", "disabled");
@@ -186,7 +186,7 @@ aceptarDatosButton.addEventListener('click',(event)=>
   document.getElementById('formDatos').style.display = 'none';
   document.getElementById('formAbm').style.display = 'block';
   const txtId = document.getElementById('textId');
-  const txtAltMax = document.getElementById("txtVelMax");
+  const txtAltMax = document.getElementById("txtAltMax");
   const txtAutonomia = document.getElementById("txtAutonomia");
   const txtCantPue = document.getElementById("txtCantPue");
   const txtCantRue = document.getElementById("txtCantRue");
@@ -210,10 +210,9 @@ aceptarDatosButton.addEventListener('click',(event)=>
   if(dropdownAbm.selectedValue === 'terrestre')
   {
     txtAltMax.setAttribute('disabled','disabled');
-    txtAutonomia.setAttribute('disabled','disabled');
-    
+    txtAutonomia.setAttribute('disabled','disabled');    
   }
-  else if(dropdownAbm.selectedValue === 'empleado')
+  else if(dropdownAbm.selectedValue === 'aereo')
   {
     txtCantPue.setAttribute('disabled','disabled');
     txtCantRue.setAttribute('disabled','disabled');
@@ -256,7 +255,7 @@ function handlerAceptar(event)
   const txtAnoFab = document.getElementById('txtAnoFab');
   const txtVelMax = document.getElementById('txtVelMax');
   const txtAutonomia = document.getElementById("txtAutonomia");
-  const txtAltMax = document.getElementById("txtVelMax");
+  const txtAltMax = document.getElementById("txtAltMax");
   const txtCantPue = document.getElementById("txtCantPue");
   const txtCantRue = document.getElementById("txtCantRue");
   const dropAbm = document.getElementById('dropAbm');
@@ -271,6 +270,7 @@ function handlerAceptar(event)
         const nuevoTerrestre= new Terrestre(0,txtModelo.value,parseInt(txtAnoFab.value),parseInt(txtVelMax.value),
         parseInt(txtCantPue.value),parseInt(txtCantRue.value));
         console.log( nuevoTerrestre);
+        console.log(txtCantRue.value);
         if(validaTerrestre( nuevoTerrestre))
         {
           alta( nuevoTerrestre);
@@ -298,21 +298,21 @@ function handlerAceptar(event)
     {
       const modificadoTerrestre =new Terrestre(0,txtModelo.value,parseInt(txtAnoFab.value),parseInt(txtVelMax.value),
       parseInt(txtCantPue.value),parseInt(txtCantRue.value));
-      modificadoTerrestre .setID(parseInt(txtId.value));
+      modificadoTerrestre.setID(parseInt(txtId.value));
       console.log(modificadoTerrestre );
-      if(validaCliente(modificadoTerrestre ))
+      if(validaTerrestre(modificadoTerrestre ))
       {
-        modificar(modificadoTerrestre );
+        modificar(modificadoTerrestre);
         console.log("modificado terrestre");
       }
     }
     else if(dropAbm.selectedIndex === 1)
     {
         const modAereo = new Aereo(0,txtModelo.value,parseInt(txtAnoFab.value),parseInt(txtVelMax.value),
-        parseInt(txtAltMax.value),parseFloat(txtAutonomia.value));
+        parseInt(txtAltMax.value),parseInt(txtAutonomia.value));
         modAereo.setID(parseInt(txtId.value));
         console.log(modAereo);
-        if(validoEmpleado(modAereo))
+        if(validaAereo(modAereo))
         {
             modificar(modAereo);
             console.log("modificado aereo");
@@ -399,7 +399,8 @@ function cargarFormAereo(listaAereo)
 }
 
 //evento aceptar y eliminar
-
+aceptarAbmButton.addEventListener('click',handlerAceptar);
+eliminarButton.addEventListener('click',handlerBorrar);
 
 
 
