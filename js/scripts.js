@@ -112,7 +112,7 @@ dropdown.addEventListener("change", (event) =>
     }
     console.log("Lista elegida", listaElegida);
     actualizarTabla(seccionTabla, listaElegida);
-    //ordenar(listaElegida);
+    ordenar(listaElegida);
 });
 
 promedio.addEventListener("click", () => 
@@ -140,6 +140,30 @@ function calcularPromedioVel(lista)
         return 0;
       }
     }
+}
+
+function ordenar(listaElegida)
+{
+  const theads = document.querySelectorAll("th");
+  theads.forEach((encabezado) => 
+  {
+    encabezado.addEventListener('click', (e) => 
+    {
+      let head = e.target.textContent;
+      console.log("th: ", head);
+      if (head === "modelo") {
+        listaElegida.sort((a, b) => a[head].localeCompare(b[head]));
+        console.log(listaElegida);
+      } 
+      else 
+      {
+        listaElegida.sort((a, b) => a[head] - b[head]);
+        console.log(listaElegida);
+      }
+      actualizarTabla(seccionTabla, listaElegida);
+      mostrarColumnas();
+    });
+  });
 }
 
 dropdownAbm.addEventListener("change", (event) => 
@@ -458,4 +482,3 @@ function handlerBorrar(e)
   }
 }
 
-aceptarAbmButton.addEventListener('click',handlerAceptar);
