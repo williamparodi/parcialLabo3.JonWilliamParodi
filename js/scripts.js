@@ -410,7 +410,7 @@ function cargarFormAereo(listaAereo)
     if (txtId && txtModelo && txtAnoFab && txtVelMax && txtAutonomia && txtAltMax) 
     {
         txtId.value = listaAereo.id;
-        txtModelo.value = listaAereo.nombre;
+        txtModelo.value = listaAereo.modelo;
         txtAnoFab.value = listaAereo.anoFab;
         txtVelMax.value = listaAereo.velMax;
         txtAutonomia.value = listaAereo.autonomia;
