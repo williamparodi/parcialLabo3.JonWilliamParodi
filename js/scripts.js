@@ -377,7 +377,7 @@ function cargarFormTerrestre(listaTerrestre)
     if (txtId && txtModelo && txtAnoFab && txtVelMax && txtCantPue && txtCantRue) 
     {
         txtId.value = listaTerrestre.id;
-        txtModelo.value = listaTerrestre.nombre;
+        txtModelo.value = listaTerrestre.modelo;
         txtAnoFab.value = listaTerrestre.anoFab;
         txtVelMax.value = listaTerrestre.velMax;
         txtCantPue.value = listaTerrestre.cantPue;
