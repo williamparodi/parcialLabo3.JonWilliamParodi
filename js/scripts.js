@@ -368,7 +368,7 @@ function cargarFormTerrestre(listaTerrestre)
     const txtAltMax = document.getElementById("txtAltMax");
     const txtAutonomia = document.getElementById("txtAutonomia");
 
-    dropAbm.selectedIndex = 1;
+    dropAbm.selectedIndex = 0;
     dropAbm.setAttribute('disabled','disabled');
     txtAltMax.setAttribute('disabled','disabled');
     txtAutonomia.setAttribute('disabled','disabled');
@@ -474,7 +474,7 @@ function handlerBorrar(e)
     lista.splice(index, 1);
     actualizarStorage("lista", lista);
     actualizarTabla(seccionTabla, lista);
-    alert("Persona Eliminada");
+    alert("Vehiculo Eliminado");
     formAbm.reset();
     //formAbm.style.display = 'none';
     formulario.style.display = 'block';
