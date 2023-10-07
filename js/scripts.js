@@ -341,7 +341,7 @@ function cargarFormTerrestre(listaTerrestre)
     const txtCantPue = document.getElementById("txtCantPue");
     const txtCantRue = document.getElementById("txtCantRue");
     const dropAbm = document.getElementById('dropAbm');
-    const txtAltMax = document.getElementById("txtVelMax");
+    const txtAltMax = document.getElementById("txtAltMax");
     const txtAutonomia = document.getElementById("txtAutonomia");
 
     dropAbm.selectedIndex = 1;
@@ -374,7 +374,7 @@ function cargarFormAereo(listaAereo)
     const txtCantPue = document.getElementById("txtCantPue");
     const txtCantRue = document.getElementById("txtCantRue");
     const dropAbm = document.getElementById('dropAbm');
-    const txtAltMax = document.getElementById("txtVelMax");
+    const txtAltMax = document.getElementById("txtAltMax");
     const txtAutonomia = document.getElementById("txtAutonomia");
 
     dropAbm.selectedIndex = 1;
